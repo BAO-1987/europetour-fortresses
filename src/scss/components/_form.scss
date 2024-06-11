@@ -1,0 +1,139 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.form {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 27px;
+    gap: 32px;
+  }
+
+  label {
+    width: 100%;
+    max-width: 100%;
+
+    span {
+      position: relative;
+      display: flex;
+      margin-bottom: 17px;
+      font-weight: var(--fw-600);
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      gap: 2px;
+
+      &::after {
+        @include bg-cover;
+
+        position: relative;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        background-image: url("../images/icons/label.svg");
+      }
+    }
+
+    &:last-of-type {
+      grid-column: 2 span;
+    }
+  }
+
+  input,
+  textarea {
+    overflow: hidden;
+    border-radius: var(--radius-main);
+    padding: 20px 16px;
+    width: 100%;
+    max-width: 100%;
+    color: var(--color-gray-300);
+    background-color: var(--color-white);
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 1.21;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  textarea {
+    border: none;
+    padding: 10px 16px;
+    min-height: 162px;
+    resize: none;
+  }
+
+  .btn {
+    padding: 20px;
+    max-width: 100%;
+    background-color: var(--color-brown-400);
+  }
+
+  &--footer {
+    display: flex;
+    width: 100%;
+    max-width: 495px;
+    gap: 8px;
+
+    .btn {
+      align-self: flex-end;
+      padding: 8px 19px;
+      max-width: 136px;
+    }
+
+    label {
+      span {
+        margin-bottom: 9px;
+        font-weight: var(--fw-500);
+        font-size: 20px;
+        letter-spacing: 0;
+
+        &::after {
+          content: none;
+        }
+      }
+
+      input {
+        border: 1px solid var(--color-gray-300);
+        padding: 9px 8px;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    input {
+      padding: 16px;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      &:last-of-type {
+        grid-column: auto;
+      }
+    }
+  }
+
+  @include media(mobile-sm) {
+    &--footer {
+      flex-direction: column;
+
+      .btn {
+        max-width: 100%;
+      }
+    }
+  }
+}

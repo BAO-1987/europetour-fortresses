@@ -1,0 +1,40 @@
+<section class="slider slider--events">
+  <h2>
+    Events
+  </h2>
+
+  <div class="slider__swiper">
+    <ul class="slider__list swiper-wrapper">
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "weddings",
+      "desc": "Weddings",
+      "title": "Weddings",
+      "text": "Elevate your wedding look with our exclusive Wedding Suits Collection. Designed to offer elegance and comfort, these suits ensure you look your best on your special day."
+        }'></include>
+
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "proms",
+      "desc": "Proms",
+      "title": "Proms",
+      "text": "Stand out at your prom with our stylish Prom Suits. Tailored for a modern fit, these suits provide a blend of sophistication and youthful flair for a memorable night."
+        }'></include>
+
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "business",
+      "desc": "Business",
+      "title": "Business",
+      "text": "Impress at your next business event with our professional Business Suits. Crafted to offer a sharp and refined appearance, these suits are perfect for making a lasting impression."
+        }'></include>
+    </ul>
+
+    <div class="slider__nav">
+      <button class="btn btn--slider btn--prev" type="button">
+      </button>
+
+      <div class="swiper-pagination"></div>
+
+      <button class="btn btn--slider btn--next" type="button">
+      </button>
+    </div>
+  </div>
+</section>

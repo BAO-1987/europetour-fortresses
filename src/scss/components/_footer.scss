@@ -1,0 +1,110 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.footer {
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: rem(86) 0;
+    gap: 24px;
+  }
+
+  &__mail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+    font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    color: var(--color-black);
+    transition: text-decoration-color 0.3s linear;
+    gap: 41px;
+
+    span {
+      color: var(--color-brown-400);
+    }
+
+    &:hover {
+      text-decoration-color: currentcolor;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    line-height: 1.21;
+    color: var(--color-white);
+    background-color: var(--color-brown-400);
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    gap: 53px;
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s linear;
+
+      &:hover {
+        text-decoration-color: currentcolor;
+      }
+    }
+  }
+
+  .logo {
+    margin: 0;
+    max-width: 347px;
+  }
+
+  @include media(tablet-wide) {
+    &__top {
+      padding: 50px 0;
+    }
+
+    &__mail {
+      gap: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    &__top {
+      padding: 30px 0;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__top {
+      flex-direction: column;
+      place-items: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__copy {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 25px;
+    }
+
+    &__policy {
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+}

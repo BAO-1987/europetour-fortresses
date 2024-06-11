@@ -1,0 +1,84 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.additional {
+  $root: &;
+
+  padding-bottom: 120px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__images {
+    img {
+      overflow: hidden;
+      border-radius: var(--radius-big);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    overflow: hidden;
+    padding: 48px;
+    top: 12%;
+    right: 0;
+    border-radius: var(--radius-big);
+    width: 100%;
+    max-width: 484px;
+    background-color: var(--color-brown-10);
+
+    p {
+      margin-bottom: 31px;
+    }
+  }
+
+  &--suits {
+    padding-bottom: 190px;
+
+    #{$root}__content {
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--guide {
+    padding-bottom: 146px;
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    padding: 16px 20px;
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 80px;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+
+    &__content {
+      padding: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__content {
+      position: relative;
+      max-width: 100%;
+      inset: 0;
+    }
+  }
+}

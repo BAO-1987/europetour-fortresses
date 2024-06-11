@@ -1,0 +1,40 @@
+<section class="slider" id="slider">
+  <h2>
+    Featured Suits
+  </h2>
+
+  <div class="slider__swiper">
+    <ul class="slider__list swiper-wrapper">
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "elegance",
+      "desc": "Timeless Elegance Black Tuxedo",
+      "title": "Timeless Elegance Black Tuxedo",
+      "text": "Sophisticated black tuxedo with satin lapels and flat-front trousers. Perfect for formal events, offering a timeless and modern fit."
+        }'></include>
+
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "contemporaty",
+      "desc": "Contemporary Charcoal Slim-Fit Suit",
+      "title": "Contemporary Charcoal Slim-Fit Suit",
+      "text": "Sleek charcoal suit with narrow silhouette and slim, tapered trousers. Ideal for weddings and business meetings."
+        }'></include>
+
+      <include src="./html/_simple-slide.html" locals='{
+     "images": "professional",
+      "desc": "Professional Navy Pinstripe Suit",
+      "title": "Professional Navy Pinstripe Suit",
+      "text": "Navy pinstripe suit with a modern cut, featuring a notch lapel jacket and pleated trousers. Perfect for corporate settings, ensuring a confident look."
+        }'></include>
+    </ul>
+
+    <div class="slider__nav">
+      <button class="btn btn--slider btn--prev" type="button">
+      </button>
+
+      <div class="swiper-pagination"></div>
+
+      <button class="btn btn--slider btn--next" type="button">
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+*[class].btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-main);
+  padding: 7px 18px;
+  width: 100%;
+  max-width: fit-content;
+  font-family: inherit;
+  font-weight: var(--fw-600);
+  font-size: 18px;
+  line-height: 1.21;
+  color: var(--color-white);
+  background-color: var(--color-brown-300);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-brown-300);
+    color: var(--color-brown-300) !important;
+    background-color: var(--color-white);
+  }
+
+  &--invert {
+    border-color: var(--color-brown-300);
+    color: var(--color-brown-300);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: var(--color-white) !important;
+      background-color: var(--color-brown-300);
+    }
+  }
+
+  &--slider {
+    z-index: 2;
+    border-radius: 16px;
+    padding: 15px;
+    min-height: 64px;
+    max-width: 64px;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../images/icons/arrow.svg");
+      width: 26px;
+      height: 17px;
+    }
+
+    &:hover {
+      color: var(--color-brown-400);
+    }
+  }
+
+  &--arrow {
+    margin-bottom: 16px;
+    padding: 7px 20px;
+    font-weight: var(--fw-400);
+    color: var(--color-brown-400);
+    background-color: transparent;
+    gap: 10px;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../images/icons/arrow.svg");
+      width: 26px;
+      height: 17px;
+      scale: -1 1;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

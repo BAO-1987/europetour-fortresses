@@ -1,0 +1,80 @@
+<header class="header">
+  <div class="wrapper">
+    <nav class="nav">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="./images/logo.svg" alt="logo of europetour for tresses" width="298" height="32"
+          loading="lazy" />
+      </a>
+
+      <button class="burger" aria-label="Mobile menu" type="button">
+        <span></span>
+      </button>
+
+      <div class="nav__inner">
+        <ul class="nav__list">
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'home' }}" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'about' }}" href="#">
+             About Us
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'tours' }}" href="#">
+              Tours
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'gallery' }}" href="#">
+             Gallery
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'FAQ' }}" href="#">
+              FAQ
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <a class="btn btn--invert " href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn btn--request" type="button" formsappId="6666f3e544ef84770884f423">
+           Book a Trip
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header');
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`
+    );
+  };
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+</script>
