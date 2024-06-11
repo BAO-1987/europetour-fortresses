@@ -24,22 +24,21 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 33px;
+      margin-right: 32px;
     }
   }
 
   &__link {
-    font-size: 18px;
-    line-height: 1.21;
-    background-color: transparent;
+    line-height: 1.62;
+    color: var(--color-white);
     transition: color 0.3s linear;
 
     &:hover {
-      color: var(--color-brown-500);
+      color: var(--color-orange-500);
     }
 
     &.true {
-      font-weight: var(--fw-700);
+        color: var(--color-orange-500);
     }
   }
 

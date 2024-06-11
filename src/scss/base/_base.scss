@@ -13,10 +13,10 @@ body {
   font-weight: var(--fw-400);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
-  line-height: 1.4;
+  line-height: 1.6;
   letter-spacing: 0;
-  color: var(--color-brown-300);
-  background-color: var(--color-brown-50);
+  color: var(--color-brown-500);
+  background-color: var(--color-white);
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -74,7 +74,7 @@ body {
 }
 
 .main {
-  padding-top: var(--header-height);
+  // padding-top: var(--header-height);
 }
 
 .overlay {
@@ -110,8 +110,6 @@ body {
   gap: 24px;
 
   img {
-    overflow: hidden;
-    border-radius: var(--radius-main);
     width: 100%;
   }
 

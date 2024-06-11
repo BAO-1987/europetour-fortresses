@@ -1,49 +1,33 @@
-<section class="contacts">
-  <h2>Get In Touch With Us</h2>
+<section class="contacts" style="background-image: url('./images/contacts.jpg');">
 
-  <form class="form">
-    <div class="form__inner">
-      <label for="userName">
-        <span> Name </span>
-        <input
-          type="text"
-          placeholder="Your full name"
-          id="userName"
-          required
-        />
-      </label>
+  <div class="contacts__inner">
 
-      <label for="userEmail">
-        <span> Email </span>
-        <input type="email" placeholder="Your email" id="userEmail" required />
-      </label>
+    <div class="container">
 
-      <label for="userPhone">
-        <span> Phone </span>
-        <input
-          type="tel"
-          placeholder="Your phone number"
-          id="userPhone"
-          required
-        />
-      </label>
+      <div class="contacts__content">
 
-      <label for="userSubject">
-        <span> Subject </span>
-        <input type="text" placeholder="Subject" id="userSubject" required />
-      </label>
+        <h2>Get in Touch with Us</h2>
 
-      <label for="userMessage">
-        <span> Message </span>
+        <form class="form">
 
-        <textarea
-          placeholder="Write your message"
-          id="userMessage"
-          required
-        ></textarea>
-      </label>
+          <label for="userEmail">
+            <input type="email" placeholder="Your email" id="userEmail" required />
+          </label>
+
+          <button class="btn" type="submit">Send</button>
+        </form>
+
+        <a href="mailto:contact@europetourfortresses.com">
+          <span>
+            email us
+          </span>
+          contact@europetourfortresses.com
+        </a>
+
+      </div>
+
     </div>
 
-    <button class="btn" type="submit">Send</button>
-  </form>
+  </div>
+
 </section>
