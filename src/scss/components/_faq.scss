@@ -3,20 +3,19 @@
 
 .faq {
   &__item {
-    overflow: hidden;
-    border: 2px solid var(--color-brown-400);
-    border-radius: var(--radius-main);
-    letter-spacing: 0.02em;
+    background-color: var(--color-brown-10);
 
     &:not(:last-child) {
-      margin-bottom: 29px;
+      margin-bottom: 16px;
     }
   }
 
   details {
+    line-height: 1.5;
+
     &[open] {
       summary {
-        padding-bottom: 16px;
+        padding-bottom: 12px;
 
         &::after {
           transform: scaleY(1);
@@ -29,18 +28,17 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 24px 32px;
-    font-weight: var(--fw-600);
-    font-size: clamp(1.125rem, 1.0833rem + 0.1852vi, 1.25rem);
-    line-height: 1.2;
-    color: var(--color-brown-400);
+    padding: 16px 65px 16px 24px;
+    font-weight: var(--fw-700);
+    font-size: 18px;
+    color: var(--color-brown-600);
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
       right: 24px;
-      top: 24px;
+      top: 17px;
       width: 32px;
       height: 32px;
       background-image: url("../images/icons/chevron.svg");
@@ -52,18 +50,16 @@
     }
 
     + div {
-      padding: 0 24px 24px 32px;
+      padding: 0 65px 16px 24px;
 
       p {
         font-size: 18px;
-        line-height: 1.2;
       }
     }
   }
 
-  h2 {
-    margin: 0 auto 45px;
-    text-align: center;
+  .wrapper {
+    max-width: 1248px;
   }
 
   @include media(tablet) {
@@ -72,10 +68,6 @@
     &__item {
       &::before {
         bottom: -14px;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 16px;
       }
 
       summary {

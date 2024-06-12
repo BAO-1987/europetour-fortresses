@@ -2,8 +2,6 @@
 @use "../utils/mixins/" as *;
 
 .reviews {
-  padding-bottom: 0;
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -35,5 +33,9 @@
   h3 {
     font-size: 26px;
     letter-spacing: 0.02em;
+  }
+
+  &--home {
+    padding-bottom: 0;
   }
 }

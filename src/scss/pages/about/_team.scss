@@ -1,0 +1,37 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.team {
+  &__content {
+    margin-bottom: 55px;
+  }
+
+  &__list {
+    li {
+      text-align: center;
+
+      p {
+        font-size: clamp(16px, 0.9583rem + 0.1852vi, 18px);
+      }
+    }
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+      color: var(--color-brown-300);
+    }
+
+    span {
+      display: block;
+      margin-bottom: 24px;
+      font-weight: var(--fw-700);
+      font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+      line-height: 1.2;
+      color: var(--color-brown-600);
+    }
+  }
+}

@@ -15,6 +15,10 @@
     transform: translateY(-200%);
   }
 
+  &.scroll {
+    background-color: var(--color-black);
+  }
+
   @include media(desktop) {
     .logo {
       margin-right: 10px;
