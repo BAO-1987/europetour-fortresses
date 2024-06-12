@@ -63,7 +63,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1340px;
+  max-width: 1294px;
 }
 
 .site-container {
@@ -95,9 +95,9 @@ body {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: 100px;
+  margin-right: 16px;
   width: 100%;
-  max-width: 290px;
+  max-width: 298px;
 
   img {
     width: 100%;
@@ -144,38 +144,57 @@ body {
 }
 
 .gallery {
-  padding: rem(140) 0;
+  &__content {
+    margin: 0 auto 65px;
+    text-align: center;
+  }
 
   img {
     width: 100%;
   }
-
-  @include media(tablet-wide) {
-    padding: 80px 0;
-  }
-
-  @include media(tablet) {
-    padding: 30px 0;
-  }
 }
 
 .contacts {
-  padding: rem(112) 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  h2 {
-    margin-bottom: rem(62);
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 667px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 16px 0;
     text-align: center;
   }
 
-  @include media(tablet-wide) {
-    padding: 80px 0;
+  &__mail {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+
+    gap: 10px;
+
+    span {
+      font-family: var(--font-family-secondary);
+      text-transform: uppercase;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+    }
   }
 
-  @include media(tablet) {
-    padding: 30px 0;
-
-    h2 {
-      margin-bottom: 30px;
-    }
+  h2 {
+    color: var(--color-white);
+    translate: 0 -24px;
   }
 }

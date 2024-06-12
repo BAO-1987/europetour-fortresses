@@ -2,70 +2,34 @@
 @use "../utils/mixins/" as *;
 
 .form {
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 27px;
-    gap: 32px;
-  }
+  display: flex;
+  margin-bottom: 49px;
+  gap: 24px;
 
   label {
     width: 100%;
     max-width: 100%;
-
-    span {
-      position: relative;
-      display: flex;
-      margin-bottom: 17px;
-      font-weight: var(--fw-600);
-      font-size: 18px;
-      letter-spacing: 0.01em;
-      gap: 2px;
-
-      &::after {
-        @include bg-cover;
-
-        position: relative;
-        top: 6px;
-        width: 8px;
-        height: 8px;
-        background-image: url("../images/icons/label.svg");
-      }
-    }
-
-    &:last-of-type {
-      grid-column: 2 span;
-    }
   }
 
   input,
   textarea {
-    overflow: hidden;
-    border-radius: var(--radius-main);
-    padding: 20px 16px;
+    border-bottom: 2px solid var(--color-gray-100);
+    padding: 15px 24px;
     width: 100%;
     max-width: 100%;
-    color: var(--color-gray-300);
-    background-color: var(--color-white);
+    color: var(--color-white);
 
     &::placeholder {
+      font-weight: var(--fw-500);
       font-size: 18px;
-      line-height: 1.21;
-      letter-spacing: 0.01em;
     }
   }
 
-  textarea {
-    border: none;
-    padding: 10px 16px;
-    min-height: 162px;
-    resize: none;
-  }
-
   .btn {
-    padding: 20px;
-    max-width: 100%;
-    background-color: var(--color-brown-400);
+    padding: 20px 32px;
+    min-width: 104px;
+    color: var(--color-black);
+    background-color: var(--color-white);
   }
 
   &--footer {

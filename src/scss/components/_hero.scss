@@ -4,7 +4,6 @@
 .hero {
   $root: &;
 
-  border-radius: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,8 +20,6 @@
   }
 
   &__content {
-    width: 100%;
-    max-width: 1074px;
     padding: 16px 0;
   }
 
@@ -42,25 +39,39 @@
     background-color: var(--color-white);
   }
 
-  &--post {
+  &--reasons {
+    #{$root}__inner {
+      min-height: 952px;
+    }
+
     #{$root}__content {
-      max-width: 471px;
+      max-width: 690px;
+      text-align: left;
+      translate: 0 -107px;
     }
 
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 21px;
+      font-size: clamp(30px, 1.1667rem + 3.1481vi, 64px);
+      line-height: 1.09;
+      color: var(--color-white);
+    }
+
+    p {
+      margin-bottom: 24px;
+      font-size: clamp(16px, 1.0417rem + 0.3704vi, 22px);
+      line-height: 1.45;
     }
 
     .btn {
-      padding: 9px 20px;
+      margin: 0;
+      color: var(--color-white) !important;
+      background-color: transparent;
+      border-color: var(--color-white);
     }
   }
 
   @include media(tablet) {
-    &::before {
-      background: rgba(243, 227, 212, 0.8);
-    }
-
     &__inner {
       min-height: 500px;
     }

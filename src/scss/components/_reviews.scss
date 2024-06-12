@@ -2,92 +2,38 @@
 @use "../utils/mixins/" as *;
 
 .reviews {
-  padding: rem(113) 0;
-  width: 100%;
-  max-width: 1128px;
-  margin-inline: auto;
+  padding-bottom: 0;
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(48);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 381px;
   }
 
   li {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: var(--radius-big);
-    padding: rem(40);
-    height: 100%;
-    background-color: var(--color-brown-10);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 24px;
   }
 
   img {
-    &:first-of-type {
-      overflow: hidden;
-      margin-bottom: rem(40);
-      border-radius: 50%;
-    }
-
-    &:last-of-type {
-      margin-bottom: 32px;
-    }
+    aspect-ratio: 1;
   }
 
   p {
-    margin-bottom: rem(50);
-    line-height: 1.21;
-    letter-spacing: 0.01em;
-  }
-
-  h2 {
-    margin-bottom: rem(62);
-    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(16px, 1.0417rem + 0.3704vi, 22px);
+    line-height: 1.45;
+    color: var(--color-brown-600);
   }
 
   h3 {
-    margin: auto 0 0;
-    font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
-  }
-
-  @include media(tablet-wide) {
-    padding: 80px 0;
-  }
-
-  @include media(tablet) {
-    padding: 30px 0;
-
-    &__list {
-      gap: 24px;
-    }
-
-    li {
-      padding: 16px;
-    }
-
-    h2 {
-      margin-bottom: 30px;
-    }
-
-    p {
-      margin-bottom: 25px;
-    }
-
-    img {
-      &:first-of-type {
-        margin-bottom: 25px;
-      }
-
-      &:last-of-type {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  @include media(mobile-m) {
-    &__list {
-      grid-template-columns: 1fr;
-    }
+    font-size: 26px;
+    letter-spacing: 0.02em;
   }
 }

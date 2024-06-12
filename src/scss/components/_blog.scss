@@ -8,13 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 56px;
     gap: 24px;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    margin-bottom: 55px;
   }
 
   .overlay {
@@ -45,7 +45,7 @@
 
   h3 {
     position: absolute;
-    bottom: 40px;
+    bottom: 23px;
     width: 100%;
     max-width: 222px;
     left: 50%;
@@ -54,7 +54,7 @@
     text-align: center;
     text-decoration: underline;
     text-decoration-color: transparent;
-  transform: translateX(-50%);
+    transform: translateX(-50%);
     transition: text-decoration-color 0.3s linear;
   }
 

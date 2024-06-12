@@ -1,7 +1,7 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
 
-@import url("https:fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+@import url('https:fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
 
 :root {
   --content-width: 1170px;
@@ -9,8 +9,8 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // font-family
-  --font-family-primary: "Inter", sans-serif;
-  --font-family-secondary: "Bebas Neue", sans-serif;
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-secondary: 'Bebas Neue', sans-serif;
 
   // font-weight
   --fw-300: 300;
@@ -25,15 +25,21 @@
   --color-white: #fff;
   --color-black: #000;
   --color-dark-900: #252b42;
-  --color-orange-500: #E17132;
+  --color-orange-500: #e17132;
+  --color-brown-400: #312a27;
   --color-brown-500: rgba(47, 18, 4, 0.64);
   --color-brown-600: #2f1204;
-  --color-gray-300: #94959b;
+  --color-gray-100: #ebeaed;
+
   //  radius
   --radius-main: 12px;
   --radius-big: 24px;
 
   // gradients
   --gradient: rgba(0, 0, 0, 0.7);
-  --gradient-gray: linear-gradient(180.00deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8) 100%);
+  --gradient-gray: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }

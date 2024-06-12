@@ -9,7 +9,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding-left: max(16px, calc((100% - 1200px) / 2));
+    padding-left: max(16px, calc((100% - 1170px) / 2));
   }
 
   &__images {
@@ -28,6 +28,10 @@
     p {
       margin-bottom: 32px;
     }
+  }
+
+  h2 {
+    margin-bottom: 32px;
   }
 
   &--reverse {

@@ -45,7 +45,13 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 9px;
+    translate: -48px 0;
+
+    .btn {
+      padding: 15px 24px !important;
+      min-width: initial !important;
+    }
   }
 
   @include media(tablet-wide) {
