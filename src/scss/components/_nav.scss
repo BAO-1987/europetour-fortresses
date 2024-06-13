@@ -38,7 +38,7 @@
     }
 
     &.true {
-        color: var(--color-orange-500);
+      color: var(--color-orange-500);
     }
   }
 
@@ -79,7 +79,7 @@
       width: 100%;
       height: var(--vh);
       max-width: 350px;
-      background-color: var(--color-brown-50);
+      background-color: var(--color-black);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.25s;
@@ -106,6 +106,7 @@
     &__btns {
       flex-direction: column;
       gap: 24px;
+      translate: none;
     }
   }
 }

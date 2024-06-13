@@ -3,12 +3,16 @@
 
 .reviews {
   &__list {
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: repeat(2, auto);
     gap: 24px;
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
     max-width: 381px;
   }
@@ -31,11 +35,16 @@
   }
 
   h3 {
+    margin: auto 0 0;
     font-size: 26px;
     letter-spacing: 0.02em;
   }
 
   &--home {
-    padding-bottom: 0;
+    padding-bottom: 17px;
+  }
+
+  &--tours {
+    padding-bottom: 50px;
   }
 }

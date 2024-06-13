@@ -15,20 +15,14 @@
     transform: translateY(-200%);
   }
 
-  &.scroll {
+  &.scroll,
+  &.active {
     background-color: var(--color-black);
-  }
-
-  @include media(desktop) {
-    .logo {
-      margin-right: 10px;
-      max-width: 220px;
-    }
   }
 
   @include media(tablet-wide) {
     .logo {
-      max-width: 200px;
+      max-width: 220px;
     }
   }
 }

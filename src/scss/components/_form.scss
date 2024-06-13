@@ -3,7 +3,7 @@
 
 .form {
   display: flex;
-  margin-bottom: 49px;
+  margin-bottom: 47px;
   gap: 24px;
 
   label {
@@ -22,6 +22,7 @@
     &::placeholder {
       font-weight: var(--fw-500);
       font-size: 18px;
+      line-height: 1.44;
     }
   }
 

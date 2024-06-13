@@ -56,119 +56,52 @@
     #{$root}__images {
       margin-right: var(--margin);
     }
-
   }
 
-  // @include media(desktop) {
-  //   &__content {
-  //     padding: 40px;
-  //   }
-  // }
+  &--tours {
+    #{$root}__content {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
 
-  // @include media(tablet-wide) {
-  //   &.exploration {
-  //     h2 {
-  //       margin: 0 auto 50px;
-  //     }
+  @include media(tablet-wide) {
+    --margin: 50px;
 
-  //     #{$root}__content {
-  //       padding: 40px;
-  //     }
-  //   }
-  //   h2 {
-  //     margin-bottom: 80px;
-  //   }
+    #{$root}__images {
+      width: 650px;
+    }
+  }
 
-  //   &--white {
-  //     .additional__image {
-  //       margin-right: 55px;
-  //       width: 550px;
-  //     }
-  //     &.reverse {
-  //       .additional__image {
-  //         width: 600px;
-  //       }
+  @include media(tablet) {
+    #{$root}__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      margin: 0;
+      padding: 16px;
+      gap: 30px;
+    }
 
-  //       .additional__content {
-  //         margin-right: 50px;
-  //       }
-  //     }
-  //   }
-  // }
+    #{$root}__images {
+      width: 100%;
+      margin: 0;
 
-  // @include media(tablet) {
-  //   &__wrapper {
-  //     grid-template-columns: 1fr;
-  //     padding: 16px;
-  //     gap: 25px;
-  //   }
+      img {
+        aspect-ratio: 2/1;
+        width: 100%;
+      }
+    }
 
-  //   &__image {
-  //     translate: none;
-  //   }
+    #{$root}__content {
+      max-width: 100%;
+    }
+  }
 
-  //   &__content {
-  //     padding: 16px;
-  //   }
-
-  //   &--white {
-  //     .additional__wrapper {
-  //       display: grid;
-  //       grid-template-columns: 1fr;
-  //       padding: 16px;
-  //       gap: 25px;
-  //     }
-
-  //     .additional__content {
-  //       order: -1;
-  //       max-width: 100%;
-  //     }
-
-  //     .additional__image {
-  //       margin-right: 0;
-  //       width: 100%;
-  //     }
-
-  //     &.reverse {
-  //       .additional__wrapper {
-  //         display: grid;
-  //         grid-template-columns: 1fr;
-  //         padding: 16px;
-  //         gap: 25px;
-  //       }
-
-  //       .additional__content {
-  //         order: -1;
-  //         max-width: 100%;
-  //       }
-
-  //       .additional__image {
-  //         margin-right: 0;
-  //         width: 100%;
-  //       }
-  //     }
-
-  //     img {
-  //       aspect-ratio: 2/1;
-  //     }
-  //   }
-
-  //   &.exploration {
-  //     #{$root}__content {
-  //       padding: 16px;
-  //     }
-
-  //     h2 {
-  //       margin: 0 auto 30px;
-  //     }
-  //   }
-
-  //   h2 {
-  //     margin-bottom: 30px;
-  //   }
-
-  //   img {
-  //     aspect-ratio: 2/1;
-  //   }
-  // }
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
+  }
 }
