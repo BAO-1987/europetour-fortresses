@@ -1,119 +1,110 @@
-// @use "../utils/functions/" as *;
-// @use "../utils/mixins/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
 
-// .post {
-//   font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
-//   letter-spacing: 0.02em;
-//   color: var(--color-brown-500);
+.post {
+  padding: 32px 0 86px;
+  color: var(--color-brown-600);
 
-//   &__descr {
-//     &:not(:last-child) {
-//       margin-bottom: 48px;
-//     }
+  &__images {
+    margin-bottom: 86px;
 
-//     p {
-//       &:not(:last-child) {
-//         margin-bottom: 44px;
-//       }
-//     }
+    img {
+      width: 100%;
+    }
+  }
 
-//     p,
-//     span {
-//       line-height: 1;
-//     }
+  &__desc {
+    margin-bottom: 48px;
 
-//     span {
-//       font-weight: var(--fw-700);
-//     }
+    ul {
+      margin-bottom: 30px;
+    }
 
-//     ul {
-//       margin-bottom: 46px;
+    li {
+      font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+      line-height: 1.5;
 
-//       li {
-//         line-height: 1;
+      &:not(:first-child) {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 60px;
 
-//         &:not(:first-child) {
-//           position: relative;
-//           padding-left: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 42px;
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+          background-color: var(--color-brown-600);
+        }
+      }
 
-//           &::before {
-//             content: "";
-//             position: absolute;
-//             left: 11px;
-//             top: 11px;
-//             border-radius: 50%;
-//             width: 6px;
-//             height: 6px;
-//             background-color: currentcolor;
-//           }
-//         }
+      &:first-child {
+        font-weight: var(--fw-700);
+      }
+    }
+  }
 
-//         &:first-child {
-//           margin-bottom: 10px;
-//         }
-//       }
+  &__additional {
+    ul {
+      margin-bottom: 48px;
+    }
 
-//       @include media(mobile-l) {
-//         padding-left: 15px;
-//       }
-//     }
-//   }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+      line-height: 1.5;
 
-//   &__content {
-//     margin-bottom: 48px;
-//     line-height: 1.21;
-//   }
+      position: relative;
+      padding-left: 25px;
 
-//   h2 {
-//     margin-bottom: 24px;
-//     font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
-//     line-height: 1.33;
-//     color: var(--color-brown-500);
-//   }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: var(--color-brown-600);
+      }
+    }
 
-//   img {
-//     overflow: hidden;
-//     margin-bottom: 48px;
-//     border-radius: var(--radius-big);
-//   }
+    span {
+      font-size: var(--fw-700);
+    }
 
-//   @include media(tablet) {
-//     &__content {
-//       margin-bottom: 24px;
-//     }
+    .btn {
+      padding: 16px;
+      min-width: 134px;
+    }
+  }
 
-//     &__descr {
-//       &:not(:last-child) {
-//         margin-bottom: 24px;
-//       }
+  h2,
+  h3 {
+    margin-bottom: 32px;
+    font-size: clamp(25px, 0.8333rem + 3.2407vi, 60px);
+    line-height: 1.3;
+    color: var(--color-brown-300);
+  }
 
-//       ul {
-//         margin-bottom: 24px;
+  h2 {
+    letter-spacing: 0.02em;
+  }
 
-//         li {
-//           &:not(:first-child) {
-//             padding-left: 15px;
+  h3 {
+    margin-bottom: 24px;
+    font-size: clamp(18px, 0.8333rem + 1.2963vi, 32px);
+  }
 
-//             &::before {
-//               left: 0;
-//             }
-//           }
-//         }
-//       }
+  p {
+    line-height: 1.5;
+  }
 
-//       p {
-//         &:not(:last-child) {
-//           margin-bottom: 24px;
-//         }
-//       }
-//     }
-
-//     img {
-//       margin-bottom: 24px;
-//     }
-
-//     h2 {
-//       margin-bottom: 16px;
-//     }
-//   }
-// }
+  .wrapper {
+    max-width: 1232px;
+  }
+}
