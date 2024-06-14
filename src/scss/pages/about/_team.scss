@@ -34,4 +34,10 @@
       color: var(--color-brown-600);
     }
   }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 25px;
+    }
+  }
 }

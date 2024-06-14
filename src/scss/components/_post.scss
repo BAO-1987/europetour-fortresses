@@ -8,18 +8,19 @@
   &__images {
     margin-bottom: 86px;
 
-    img {
+    img { 
       width: 100%;
+      min-height: 200px;
     }
   }
 
   li {
     position: relative;
-    font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
-    line-height: 1.5;
     display: flex;
     align-items: center;
     padding-left: 60px;
+    font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+    line-height: 1.5;
 
     &::before {
       content: "";
@@ -106,5 +107,14 @@
 
   .wrapper {
     max-width: 1232px;
+  }
+
+  @include media(tablet) {
+    padding: 25px 0;
+
+    &__images,
+    &__desc {
+      margin-bottom: 35px;
+    }
   }
 }

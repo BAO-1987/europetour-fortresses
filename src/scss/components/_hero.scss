@@ -72,7 +72,7 @@
   }
 
   @include media(tablet) {
-    &__inner {
+    #{$root}__inner {
       min-height: 500px;
     }
 
@@ -83,21 +83,22 @@
     p {
       margin-bottom: 24px;
     }
+
+    &--reasons {
+      #{$root}__content {
+        translate: none;
+        max-width: 100%;
+      }
+    }
   }
 
   @include media(mobile-m) {
     #{$root}__inner {
-      min-height: 350px;
-
-      p {
-        font-size: 18px;
-      }
+      min-height: 380px;
     }
 
     .btn {
-      &:not(.btn--arrow) {
-        max-width: 100%;
-      }
+      max-width: 100%;
     }
   }
 }

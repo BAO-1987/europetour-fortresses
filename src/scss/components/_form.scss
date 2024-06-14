@@ -33,72 +33,23 @@
     background-color: var(--color-white);
   }
 
-  &--footer {
-    display: flex;
-    width: 100%;
-    max-width: 495px;
-    gap: 8px;
-
-    .btn {
-      align-self: flex-end;
-      padding: 8px 19px;
-      max-width: 136px;
-    }
-
-    label {
-      span {
-        margin-bottom: 9px;
-        font-weight: var(--fw-500);
-        font-size: 20px;
-        letter-spacing: 0;
-
-        &::after {
-          content: none;
-        }
-      }
-
-      input {
-        border: 1px solid var(--color-gray-300);
-        padding: 9px 8px;
-      }
-    }
-  }
-
   @include media(tablet) {
+    margin-bottom: 25px;
+
     &__inner {
       gap: 24px;
     }
   }
 
-  @include media(mobile-l) {
-    input {
-      padding: 16px;
-    }
-
-    textarea {
-      min-height: 100px;
-    }
-  }
-
   @include media(mobile-m) {
-    &__inner {
-      grid-template-columns: 1fr;
+    flex-direction: column;
+
+    .btn {
+      max-width: 100%;
     }
-
-    label {
-      &:last-of-type {
-        grid-column: auto;
-      }
-    }
-  }
-
-  @include media(mobile-sm) {
-    &--footer {
-      flex-direction: column;
-
-      .btn {
-        max-width: 100%;
-      }
+    
+    h2 {
+      translate: none;
     }
   }
 }

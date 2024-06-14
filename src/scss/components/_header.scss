@@ -25,4 +25,12 @@
       max-width: 220px;
     }
   }
+
+  @include media(tablet) {
+    .nav__btns {
+      flex-direction: column;
+      gap: 24px;
+      translate: none;
+    }
+  }
 }

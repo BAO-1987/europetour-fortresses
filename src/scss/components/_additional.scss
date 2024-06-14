@@ -3,7 +3,7 @@
 
 .additional {
   $root: &;
-
+  --content-width: 570px;
   --margin: 130px;
 
   &__inner {
@@ -13,7 +13,7 @@
   }
 
   &__images {
-    width: calc(100% - 570px - 130px);
+    width: calc(100% - var(--content-width) - var(--margin));
 
     img {
       width: 100%;
@@ -23,7 +23,7 @@
   &__content {
     margin-right: var(--margin);
     width: 100%;
-    max-width: 570px;
+    max-width: var(--content-width);
 
     p {
       margin-bottom: 32px;
@@ -68,10 +68,8 @@
 
   @include media(tablet-wide) {
     --margin: 50px;
-
-    #{$root}__images {
-      width: 650px;
-    }
+    --content-width: 450px;
+  
   }
 
   @include media(tablet) {

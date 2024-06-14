@@ -2,7 +2,7 @@
 @use "../../utils/mixins" as *;
 
 .mission {
-  padding-bottom: 98px;
+  padding-bottom: rem(98);
 
   &__inner {
     display: grid;
@@ -28,9 +28,9 @@
         border-radius: 32px;
         width: 86px;
         height: 86px;
-        background-position: center;
         background-image: url("../images/icons/check.svg");
-        background-size: 42px 42px;
+        background-position: center;
+        background-size: 42px;
         background-repeat: no-repeat;
         background-color: var(--color-orange-500);
       }
@@ -69,5 +69,43 @@
     margin-bottom: 8px;
     font-size: 24px;
     line-height: 1;
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 50px;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 25px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__desc {
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      padding-left: 75px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+
+        &::before {
+          left: -70px;
+          width: 60px;
+          height: 60px;
+          background-size: 32px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/10;
+    }
   }
 }
