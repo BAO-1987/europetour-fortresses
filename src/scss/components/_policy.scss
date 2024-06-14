@@ -10,13 +10,15 @@
 
   h1 {
     margin: 0 auto 48px;
-    font-size: clamp(25px, 1.3333rem + 1.0185vi, 36px);
+    font-size: clamp(30px, 1.3333rem + 2.4074vi, 56px);
     text-align: center;
+    color: var(--color-brown-600);
   }
 
   h2 {
     margin-bottom: 24px;
-    font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
+    font-size: clamp(1.25rem, 1rem + 1.1111vi, 2rem);
+    color: var(--color-brown-300)
   }
 
   ul {

@@ -23,26 +23,12 @@
 
   &:hover,
   &:focus {
-    border-color: var(--color-brown-300);
-    color: var(--color-brown-300) !important;
+    border-color: var(--color-orange-500);
+    color: var(--color-orange-500) !important;
     background-color: var(--color-white);
   }
 
   &--sign {
     background-color: transparent;
   }
-
-  // &--invert {
-  //   border-color: var(--color-brown-300);
-  //   color: var(--color-brown-300);
-  //   background-color: transparent;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--color-white) !important;
-  //     background-color: var(--color-brown-300);
-  //   }
-  // }
-
-
 }

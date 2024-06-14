@@ -25,6 +25,10 @@ html {
   box-sizing: border-box;
 }
 
+*:focus-visible {
+  outline: max(2px, 0.1em) solid var(--color-orange-500);
+}
+
 select {
   appearance: none;
   outline: 0;

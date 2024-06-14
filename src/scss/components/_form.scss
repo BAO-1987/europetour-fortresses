@@ -24,6 +24,11 @@
       font-size: 18px;
       line-height: 1.44;
     }
+
+    &:focus {
+      outline-color: transparent;
+      border-color: var(--color-orange-500);
+    }
   }
 
   .btn {
@@ -47,7 +52,7 @@
     .btn {
       max-width: 100%;
     }
-    
+
     h2 {
       translate: none;
     }

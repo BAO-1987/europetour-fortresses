@@ -16,9 +16,11 @@
   }
 
   &.scroll,
-  &.active {
+  &.active,
+  &--gray {
     background-color: var(--color-black);
   }
+  
 
   @include media(tablet-wide) {
     .logo {
@@ -27,6 +29,8 @@
   }
 
   @include media(tablet) {
+    padding: 12px 0;
+
     .nav__btns {
       flex-direction: column;
       gap: 24px;
